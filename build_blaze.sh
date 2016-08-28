@@ -83,7 +83,7 @@ function make_dtb {
 			echo "             		Creating dt.img....	              "
 			echo -e "*****************************************************"
 			rm -rf $NEWOUT/dt.img
-			$DTBTOOL -v -s 2048 -o $NEW_OUT/dt.img -p scripts/dtc/ arch/arm/boot/dts/
+			$DTBTOOL -v -s 2048 -o $NEW_OUT/dt.img -p scripts/dtc/ arch/arm64/boot/dts/
 		}
 
 function make_zip {
