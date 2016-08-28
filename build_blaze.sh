@@ -17,7 +17,7 @@ KERNEL_DIR=$PWD
 IMAGE=$KERNEL_DIR/arch/arm64/boot/Image
 #IMAGE=$KERNEL_DIR/arch/arm/boot/zImage for 32 bit architecture
 DTBTOOL=$KERNEL_DIR/scripts/dtbTool
-TOOLCHAIN=$ANDROID_DIR/toolchain/aarch64-linux-android-4.9-aosp/bin
+TOOLCHAIN=$ANDROID_DIR/toolchain/cm13/bin
 
 #Paths
 OUT_DIR=$KERNEL_DIR/out
