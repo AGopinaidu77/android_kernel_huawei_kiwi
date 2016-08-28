@@ -26,7 +26,7 @@ NEW_OUT=$OUT_DIR/tools
 
 # Kernel Version Info
 BASE="-Blaze™Kernel"
-CUR_VER=""
+CUR_VER="-2"
 BLAZE_VER="$BASE$CUR_VER"
  
 
@@ -73,7 +73,6 @@ function make_recompile {
 			rm -rf $NEWOUT/Image
 			cp -vr $IMAGE $NEW_OUT
 			make_dtb
-			strip_modules
 			make_zip
 			housekeeping
 		}
