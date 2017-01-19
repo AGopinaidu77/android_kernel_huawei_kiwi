@@ -21,27 +21,27 @@ TOOLCHAIN=$ANDROID_DIR/toolchains/aarch64-linux-android/bin
 
 #Paths
 OUT_DIR=$KERNEL_DIR/out
-OUT_ZIP=$KERNEL_DIR/Blaze-Releases
+OUT_ZIP=$KERNEL_DIR/Firestorm-Releases
 NEW_OUT=$OUT_DIR/tools
 
 # Kernel Version Info
-BASE="-Blaze™Kernel"
+BASE="-FIRESTORM
 CUR_VER="-2"
 BLAZE_VER="$BASE$CUR_VER"
  
 
 # Variables
 
-DEFCONFIG="blaze_defconfig"
+DEFCONFIG="firestorm_defconfig"
 export LOCALVERSION=~`echo $BLAZE_VER`
 export CROSS_COMPILE=$TOOLCHAIN/aarch64-linux-android-
 export ARCH=arm64
-export KBUILD_BUILD_USER="GuneetAtwal"
+export KBUILD_BUILD_USER="Gopinaidu Annam"
 export KBUILD_BUILD_HOST="LegacyServer"
 
 function make_blaze {
 		echo -e "$green*******************************************************"
-		echo "                  Compiling $BLAZE_VER	              "
+		echo "                  Compiling $FIRESTORM_VER	              "
 		echo -e "*****************************************************"
 		echo
 		make $DEFCONFIG
@@ -67,7 +67,7 @@ function make_clean {
 		
 function make_recompile {
 			echo -e "$cyan*******************************************************"
-			echo "             Recompiling $BLAZE_VER	              "
+			echo "             Recompiling $FIRESTORM_VER	              "
 			echo -e "*****************************************************"
 			make -j8
 			rm -rf $NEWOUT/Image
@@ -93,7 +93,7 @@ function make_zip {
 		rm -f '*.zip'
 		zip -yr BlazeKernel`echo $CUR_VER`.zip *
 		mv BlazeKernel`echo $CUR_VER`.zip $OUT_ZIP
-		echo "       Find your zip in Blaze-Releases directory"
+		echo "       Find your zip in FIRESTORM-Releases directory"
 		echo -e "$default"
 		cd $KERNEL_DIR 
 		}
@@ -112,7 +112,7 @@ while read -p " 'Y' to Compile all , 'R' to clean and recompile , 'C' to to do a
 do
 case "$choice" in
 	y|Y)
-		make_blaze
+		make_firestorm
 		break
 		;;
 	r|R )
