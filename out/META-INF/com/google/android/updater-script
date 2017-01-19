@@ -1,5 +1,5 @@
 ui_print("***********************************");
-ui_print("---------- Blaze™ Kernel --------");
+ui_print("------------ FIRESTORM ------------");
 ui_print("***********************************");
 ui_print("1) Preparing the files");
 package_extract_dir("tools", "/tmp");
