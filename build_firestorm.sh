@@ -33,7 +33,7 @@ BLAZE_VER="$BASE$CUR_VER"
 # Variables
 
 DEFCONFIG="firestorm_defconfig"
-export LOCALVERSION=~`echo $BLAZE_VER`
+export LOCALVERSION=~`echo $FIRESTORM_VER`
 export CROSS_COMPILE=$TOOLCHAIN/aarch64-linux-android-
 export ARCH=arm64
 export KBUILD_BUILD_USER="Gopinaidu Annam"
